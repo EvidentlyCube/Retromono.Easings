@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netcoreapp2.0;net45</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Maurycy Zarzycki</Authors>
+    <Company>Maurycy Zarzycki Evidently Cube</Company>
+    <Description>A collection of easing functions, intended to use with Retromono.Tween but otherwise universal</Description>
+    <PackageTags>easing</PackageTags>
+  </PropertyGroup>
+</Project>
