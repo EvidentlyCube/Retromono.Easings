@@ -28,10 +28,36 @@ namespace Tests {
 
         [Theory]
         [MemberData(nameof(GetEasings))]
-        public void ShouldReturnOneAtEnd(MethodInfo methodInfo) {
-            var result = (double)methodInfo.Invoke(null, new object[]{1});
+        public void ShouldReturnOneAtEnd(MethodInfo methodInfo)
+        {
+            var result = (double)methodInfo.Invoke(null, new object[] { 1 });
 
             Assert.Equal(1, result, 10);
+        }
+
+        [Theory]
+        [MemberData(nameof(GetEasings))]
+        public void ShouldNeverReturnNanOrInfinityForValidValues(MethodInfo methodInfo)
+        {
+            for (var i = 1; i < 100; i++)
+            {
+                var result = (double)methodInfo.Invoke(null, new object[] { i / 100 });
+
+                Assert.True(!double.IsNaN(result));
+                Assert.True(!double.IsInfinity(result));
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(GetEasings))]
+        public void ShouldNeverReturnAnInsaneValue(MethodInfo methodInfo)
+        {
+            for (var i = 1; i < 100; i++)
+            {
+                var result = (double)methodInfo.Invoke(null, new object[] { i / 100.0 });
+
+                Assert.InRange(result, -1, 2);
+            }
         }
     }
 }

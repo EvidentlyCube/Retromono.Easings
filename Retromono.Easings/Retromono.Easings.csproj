@@ -6,5 +6,13 @@
     <Company>Maurycy Zarzycki Evidently Cube</Company>
     <Description>A collection of easing functions, intended to use with Retromono.Tween but otherwise universal</Description>
     <PackageTags>easing</PackageTags>
+    <RepositoryUrl>https://github.com/RetrocadeNet/Retromono.Easings</RepositoryUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/RetrocadeNet/Retromono.Easings/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <Copyright>Maurycy Zarzycki Evidently Cube</Copyright>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.32.0" />
+    <PackageReference Include="StyleCop.MSBuild" Version="5.0.0" />
+  </ItemGroup>
 </Project>

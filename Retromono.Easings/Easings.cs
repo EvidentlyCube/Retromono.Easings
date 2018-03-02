@@ -1,14 +1,19 @@
 ﻿using System;
 
-// FROM https://github.com/krig/easing/blob/master/easing.hpp
-namespace Retromono.Easings {
-    /// <summary>
-    /// A set of static easing functions that all take a single parameter, time, of the value between 0 and 1 and
-    /// return the trasformation of the time. When always return <c>0</c> when passed <c>0</c> and <c>1</c> when
-    /// passed <c>1</c>.
-    /// For a visualisation visit <a href="http://easings.net/">Easings.net</a>
-    /// </summary>
-    public static class Easings {
+// FROM 
+namespace Retromono.Easings
+{
+	/// <summary>
+	/// Collection of easing that take 1 argument: the time between 0 and 1 (inclusive).
+	/// </summary>
+	/// <remarks>
+	/// A set of static easing functions that all take a single parameter, time, of the value between 0 and 1 and
+	/// return the transformation of the time. When always return <c>0</c> when passed <c>0</c> and <c>1</c> when
+	/// passed <c>1</c>.
+	/// </remarks>
+	/// <see href="http://easings.net/">Visit Easings.net for visualisations.</see>
+	/// <see href="https://github.com/krig/easing/blob/master/easing.hpp">Original source.</see>
+	public static class Easings {
         /// <summary>
         /// Starts slower and then accelerates, creates a very soft curve.
         /// </summary>
@@ -19,7 +24,7 @@ namespace Retromono.Easings {
         }
 
         /// <summary>
-        /// Starts faster and then deccelerates, creates a very soft curve.
+        /// Starts faster and then decelerates, creates a very soft curve.
         /// </summary>
         /// <param name="t">Time in the value between 0 and 1 (inclusive)</param>
         /// <returns>Eased time</returns>
@@ -35,7 +40,6 @@ namespace Retromono.Easings {
         public static double SineInOut(double t) {
             return 0.5 * (1.0 - Math.Cos(t * Math.PI));
         }
-
 
         /// <summary>
         /// Starts slower and then accelerates, creates a slightly bigger curve than <see cref="SineIn"/>.
@@ -193,10 +197,11 @@ namespace Retromono.Easings {
         /// <param name="t">Time in the value between 0 and 1 (inclusive)</param>
         /// <returns>Eased time</returns>
         public static double ExponentialInOut(double t) {
-            if (t <= 0 || t >= 1.0)
-                return t;
+	        if (t <= 0 || t >= 1.0) {
+		        return t;
+	        }
 
-            if (t < 0.5) {
+	        if (t < 0.5) {
                 return 0.5 * Math.Pow(2.0, 20.0 * t - 10.0);
             }
             else {
@@ -223,7 +228,7 @@ namespace Retromono.Easings {
         }
 
         /// <summary>
-        /// Starts slower and then starts accelerating fast and past the middle point it starts to decelerate fast, creatig a very sharp curve.
+        /// Starts slower and then starts accelerating fast and past the middle point it starts to decelerate fast, creating a very sharp curve.
         /// creates a bigger curve than <see cref="QuinticInOut"/>.
         /// </summary>
         /// <param name="t">Time in the value between 0 and 1 (inclusive)</param>
@@ -306,7 +311,7 @@ namespace Retromono.Easings {
         }
         
         /// <summary>
-        /// Performs a set of 4 bounces where the midpoint of the fourth is the fial position.
+        /// Performs a set of 4 bounces where the midpoint of the fourth is the final position.
         /// </summary>
         /// <param name="t">Time in the value between 0 and 1 (inclusive)</param>
         /// <returns>Eased time</returns>
@@ -350,7 +355,7 @@ namespace Retromono.Easings {
         }
 
         /// <summary>
-        /// Dynamicly accelerates until the middle point and then decelerates.
+        /// Dynamically accelerates until the middle point and then decelerates.
         /// </summary>
         /// <param name="t">Time in the value between 0 and 1 (inclusive)</param>
         /// <returns>Eased time</returns>

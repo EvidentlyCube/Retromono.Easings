@@ -2,3 +2,8 @@
 **/obj/
 .vs
 .idea
+
+**/log.txt
+**/*.Cache
+
+docfxBin/

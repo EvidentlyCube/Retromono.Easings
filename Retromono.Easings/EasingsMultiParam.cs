@@ -2,13 +2,17 @@
 
 // FROM https://github.com/krig/easing/blob/master/easing.hpp
 namespace Retromono.Easings {
-    /// <summary>
-    /// A set of static easing functions that all take four parameters, current time, starting and final value and
-    /// the duration. When time is <c>0</c> it returns the starting value, when time is equal to duration it
-    /// returns the target value. 
-    /// For a visualisation visit <a href="http://easings.net/">Easings.net</a>
-    /// </summary>
-    public static class EasingsMultiParam {
+	/// <summary>
+	/// Collection of easing that take 4 arguments: <c>time</c>, <c>from</c>, <c>to</c> and <c>duration</c>.
+	/// </summary>
+	/// <remarks>
+	/// A set of static easing functions that all take four parameters, current time, starting and final value and
+	/// the duration. When time is <c>0</c> it returns the starting value, when time is equal to duration it
+	/// returns the target value. 
+	/// </remarks>
+	/// <see href="http://easings.net/">Visit Easings.net for visualisations.</see>
+	/// <see href="https://github.com/krig/easing/blob/master/easing.hpp">Original source.</see>
+	public static class EasingsMultiParam {
         /// <summary>
         /// Starts slower and then accelerates, creates a very soft curve.
         /// </summary>
@@ -46,7 +50,7 @@ namespace Retromono.Easings {
         }
 
         /// <summary>
-        /// Starts faster and then deccelerates, creates a very soft curve.
+        /// Starts faster and then decelerates, creates a very soft curve.
         /// </summary>
         /// <param name="t">Time in the value between 0 and duration (inclusive)</param>
         /// <param name="from">Starting value from the ease</param>
@@ -255,7 +259,7 @@ namespace Retromono.Easings {
         }
 
         /// <summary>
-        /// Starts slower and then starts accelerating fast and past the middle point it starts to decelerate fast, creatig a very sharp curve.
+        /// Starts slower and then starts accelerating fast and past the middle point it starts to decelerate fast, creating a very sharp curve.
         /// creates a bigger curve than <see cref="QuinticInOut"/>.
         /// </summary>
         /// <param name="t">Time in the value between 0 and duration (inclusive)</param>
@@ -341,7 +345,7 @@ namespace Retromono.Easings {
         }
 
         /// <summary>
-        /// Performs a set of 4 bounces where the midpoint of the fourth is the fial position.
+        /// Performs a set of 4 bounces where the midpoint of the fourth is the final position.
         /// </summary>
         /// <param name="t">Time in the value between 0 and duration (inclusive)</param>
         /// <param name="from">Starting value from the ease</param>
@@ -378,7 +382,7 @@ namespace Retromono.Easings {
         }
 
         /// <summary>
-        /// Dynamicly accelerates until the middle point and then decelerates.
+        /// Dynamically accelerates until the middle point and then decelerates.
         /// </summary>
         /// <param name="t">Time in the value between 0 and duration (inclusive)</param>
         /// <param name="from">Starting value from the ease</param>
