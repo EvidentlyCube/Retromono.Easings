@@ -12,7 +12,6 @@
     <Copyright>Maurycy Zarzycki Evidently Cube</Copyright>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.32.0" />
     <PackageReference Include="StyleCop.MSBuild" Version="5.0.0" />
   </ItemGroup>
 </Project>
