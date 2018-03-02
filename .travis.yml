@@ -1,0 +1,10 @@
+language: csharp
+solution: Retromono.Easings.sln
+install:
+  - nuget restore Retromono.Easings.sln
+  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release Retromono.Easings.sln
+  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./Tests/bin/Release/netcoreapp2.0/Tests.dll
+  
+  
