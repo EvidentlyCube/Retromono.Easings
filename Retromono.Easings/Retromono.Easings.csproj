@@ -10,6 +10,8 @@
     <PackageProjectUrl></PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/RetrocadeNet/Retromono.Easings/blob/master/LICENSE.txt</PackageLicenseUrl>
     <Copyright>Maurycy Zarzycki Evidently Cube</Copyright>
+	<Title>Ducks</Title>
+	<PackageTitle>Ducks 2</PackageTitle>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="StyleCop.MSBuild" Version="5.0.0" />
